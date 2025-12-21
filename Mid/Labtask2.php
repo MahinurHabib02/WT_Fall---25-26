@@ -19,7 +19,7 @@
       background-color: #ffffff;
       padding: 20px;
       border-radius: 10px;
-      width: 300px;
+      width: 400px;
       margin: 0 auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
@@ -111,12 +111,12 @@
       }
  
       if (isNaN(phone)) {
-        errorDiv.innerHTML = "Phone number must contain digits only.";
+        errorDiv.innerHTML = "phone number must contain digits";
         return false;
       }
 
       if (password !== confirmPassword) {
-        errorDiv.innerHTML = "Passwords do not match.";
+        errorDiv.innerHTML = "password do not match.";
         return false;
       }
 
