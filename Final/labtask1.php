@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
     if (!isset($_POST["degree"]) || count($_POST["degree"]) < 2)
     {
-        $degreeErr = "Select at least two skills";
+        $degreeErr = " (Select at least two skills)";
     }
     else
     {
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   
     if (empty($_POST["bg"]))
     {
-        $bgErr = "Select blood group";
+        $bgErr = " (Select blood group)";
     }
     else
     {
