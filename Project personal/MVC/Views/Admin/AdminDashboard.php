@@ -67,11 +67,46 @@ body
             {
            color:#0d6efd
               }
-    </style>
-</head>
-   <body>
 
-    <div class="sidebar">
+.main-content
+          {
+        margin-left:220px;
+          padding:30px
+             }
+
+  .card-row 
+           {
+         display:flex;
+          gap:20px;
+         margin-bottom:30px
+              }
+
+  .card
+       {
+         flex:1;
+           background:#fff;
+           padding:20px;
+              text-align:center;
+                 border-radius:10px;
+              box-shadow:0 4px 10px rgba(0,0,0,.1)
+             }
+
+           .card h5
+                {
+                margin-bottom:10px
+                   }
+
+       .card p
+           {
+            font-size:40px;
+                  color:#0d6efd
+               }
+   </style>
+   </head>
+
+<body>
+     
+       <div class="sidebar">
            <img src="../../../MVC/Images/445492922_122100097214350632_1896056624552573141_n.jpg" alt="Admin">
               <a href="">Dashboard</a>
                    <a href="">Manage Users</a>
@@ -80,14 +115,43 @@ body
                   <a href="">Manage Tasks</a>
                   <a href="">Reports</a>
                      <a href="">Settings</a>
-                  <a href="">Logout</a>
-        </div>
+               <a href="">Logout</a>
+</div>
 
-   <div class="top-navbar">
-             <h5>Admin Dashboard</h5>
+<div class="top-navbar">
+    <h5>Admin Dashboard</h5>
     <div>
-           Welcome
+        Welcome,
+        <?php
+        if(isset($_SESSION['username'])){
+            echo $_SESSION['username'];
+        }else{
+            echo 'Admin';
+        }
+        ?>
     </div>
 </div>
-</body>
-</html>
+
+<div class="main-content">
+    <div class="card-row">
+        <div class="card">
+            <h5>Total Users</h5>
+            <p>0</p>
+        </div>
+
+       
+   <div class="card">
+       <h5>Total Volunteers</h5>
+         <p>0</p>
+     </div>
+
+      
+     <div class="card">
+         <h5>Active Events</h5>
+           <p>0</p>
+        </div>
+
+    </div>
+        </div>
+         </body>
+          </html>
