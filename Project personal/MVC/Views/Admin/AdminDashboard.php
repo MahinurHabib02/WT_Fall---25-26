@@ -101,6 +101,37 @@ body
             font-size:40px;
                   color:#0d6efd
                }
+
+    .table-box
+          {
+            background:#fff;
+            padding:20px;
+              border-radius:10px;
+             box-shadow:0 4px 10px rgba(0,0,0,.1)
+                 }
+
+    table
+        {
+         width:100%;
+            border-collapse:collapse
+               }
+
+      thead
+         {
+        background:#e9ecef
+           }
+
+    th,td
+        {
+        padding:12px;
+         text-align:left;
+         border-bottom:1px solid #ddd
+              }
+
+      tr:hover
+      {
+         background:#f1f1f1
+             }
    </style>
    </head>
 
@@ -152,6 +183,25 @@ body
         </div>
 
     </div>
-        </div>
-         </body>
-          </html>
+
+    <div class="table-box">
+        <h5 style="margin-bottom:15px;">Upcoming Events</h5>
+
+          <table>
+                <thead>
+                   <tr>
+                       <th>Event Name</th>
+                       <th>Date</th>
+                       <th>Venue</th>
+                       <th>Participants</th>
+                       <th>Status</th>
+                        </tr>
+                     </thead>
+                   <tbody>
+            </tbody>
+        </table>
+   
+       </div>
+         </div>
+    </body>
+      </html>
