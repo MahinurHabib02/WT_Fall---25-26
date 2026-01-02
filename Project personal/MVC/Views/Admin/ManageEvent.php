@@ -132,6 +132,41 @@ tr:hover
             background:#f1f1f1;
             }
 
+.status
+      {
+       padding:5px 10px;
+        border-radius:20px;
+        font-size:13px;
+        color:#fff;
+             }
+
+.scheduled
+           { 
+            background:#198754;
+         }
+.pending  
+         { 
+          background:#6c757d;
+            }
+
+
+.action-btn
+     {
+       padding:5px 10px;
+       border:none;
+       border-radius:5px;
+       cursor:pointer;
+         color:#fff;
+          }
+
+.edit
+       { 
+        background:#ffc107;
+     }
+.delete
+      { 
+       background:#dc3545; 
+        }
 </style>
 </head>
 
@@ -172,10 +207,35 @@ tr:hover
           <th>Actions</th>
         </tr>
       </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Football Tournament</td>
+          <td>2025-09-15</td>
+          <td>Main Field</td>
+          <td>32</td>
+          <td><span class="status scheduled">Scheduled</span></td>
+          <td>
+            <button class="action-btn edit">Edit</button>
+            <button class="action-btn delete">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Basketball Match</td>
+          <td>2025-09-20</td>
+          <td>Gymnasium</td>
+          <td>16</td>
+          <td><span class="status pending">Pending</span></td>
+          <td>
+            <button class="action-btn edit">Edit</button>
+            <button class="action-btn delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
 </div>
-
 </body>
 </html>
