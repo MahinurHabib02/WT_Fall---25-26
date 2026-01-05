@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="../../Views/CSS/admindashboard.css">
    <title>
          Admin Dashboard - AIUB Sports
           </title>
