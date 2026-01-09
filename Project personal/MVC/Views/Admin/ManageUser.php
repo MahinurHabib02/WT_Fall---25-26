@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <link rel="stylesheet" href="">
-  <link rel="stylesheet" href="">
+ <link rel="stylesheet" href="/Project personal/MVC/Views/CSS/admindashboard.css">
+  <link rel="stylesheet" href="/Project personal/MVC/Views/CSS/adminuser.css">
 <title>
     Manage User - Admin
                 </title>
@@ -11,13 +11,13 @@
 <body>
  <div class="sidebar">
            <img src="/Project personal/MVC/Images/445492922_122100097214350632_1896056624552573141_n.jpg" alt="Admin">
-               <a href="">Dashboard</a>
-                   <a href="">Manage Users</a>
+               <a href="../Controller/AdminDashboardController.php">Dashboard</a>
+                   <a href="../Controller/AdminUsersController.php">Manage Users</a>
                 <a href="">Manage Events</a>
                   <a href="">Registrations</a>
                   <a href="">Manage Tasks</a>
                   <a href="">Settings</a>
-             <a href="">Logout</a>
+             <a href="/Project personal/MVC/Controller/logout.php">Logout</a>
 
 </div>
 
