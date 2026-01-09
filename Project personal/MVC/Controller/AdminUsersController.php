@@ -28,3 +28,7 @@ if(isset($_GET['edit_id'])){
 }
 
 
+$users = $model->getAllUsers();
+
+
+require_once __DIR__ . "/../Views/Admin/ManageUser.php";
