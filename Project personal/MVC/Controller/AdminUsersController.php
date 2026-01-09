@@ -15,4 +15,11 @@ if(isset($_GET['delete_id'])){
     exit;
 }
 
+if(isset($_POST['update_user'])){
+    $model->updateUser($_POST['id'], $_POST['username'], $_POST['email'], $_POST['role'], $_POST['status']);
+    header("Location: /Project personal/MVC/Controller/AdminUsersController.php");
+    exit;
+}
+
+
 
