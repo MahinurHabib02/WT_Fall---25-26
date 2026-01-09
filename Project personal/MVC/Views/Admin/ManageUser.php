@@ -64,7 +64,30 @@
         </div>
     </div>
 </div>
+<?php if($editUser): ?>
+<div class="card-custom" style="margin-bottom:20px;">
+    <form method="POST" action="/Project personal/MVC/Controller/AdminUsersController.php">
+        <input type="hidden" name="id" value="<?php echo $editUser['id']; ?>">
 
+
+        <input type="text" name="username" value="<?php echo htmlspecialchars($editUser['username']); ?>" placeholder="Username" required>
+
+
+        <input type="email" name="email" value="<?php echo htmlspecialchars($editUser['email']); ?>" placeholder="Email" required>
+        
+        <select name="role">
+            <option value="admin" <?php if($editUser['role']=='admin') echo 'selected'; ?>>Admin</option>
+            <option value="user" <?php if($editUser['role']=='user') echo 'selected'; ?>>User</option>
+            <option value="volunteer" <?php if($editUser['role']=='volunteer') echo 'selected'; ?>>Volunteer</option>
+        </select>
+        <select name="status">
+            <option value="1" <?php if($editUser['status']==1) echo 'selected'; ?>>Active</option>
+            <option value="0" <?php if($editUser['status']==0) echo 'selected'; ?>>Inactive</option>
+        </select>
+        <button type="submit" name="update_user" class="button-custom button-primary">Update User</button>
+    </form>
+</div>
+<?php endif; ?>
 
 </body>
 </html>
