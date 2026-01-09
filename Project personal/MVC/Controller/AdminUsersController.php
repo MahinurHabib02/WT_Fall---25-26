@@ -22,4 +22,9 @@ if(isset($_POST['update_user'])){
 }
 
 
+$editUser = null;
+if(isset($_GET['edit_id'])){
+    $editUser = $model->getUserById($_GET['edit_id']);
+}
+
 
