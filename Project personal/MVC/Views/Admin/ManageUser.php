@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="/Project personal/MVC/Views/CSS/adminuser.css">
 <title>
     Manage User - Admin
-                </title>
+      </title>
 
 </head>
 <body>
@@ -16,7 +16,7 @@
                 <a href="">Manage Events</a>
                   <a href="">Registrations</a>
                   <a href="">Manage Tasks</a>
-                  <a href="">Settings</a>
+                  <a href="../Controller/AdminSettingsController.php">Settings</a>
              <a href="/Project personal/MVC/Controller/logout.php">Logout</a>
 
 </div>
@@ -58,7 +58,32 @@
                         </tr>
                     </thead>
                 
+<tbody>
+<?php if(!empty($users)): ?>
+    <?php foreach($users as $index => $user): ?>
+        <tr>
+            <td><?php echo $index + 1; ?></td>
+            <td><?php echo htmlspecialchars($user['username']); ?></td>
+            <td><?php echo htmlspecialchars($user['email']); ?></td>
+            <td><?php echo htmlspecialchars($user['role']); ?></td>
+            <td><?php echo $user['status'] == 1 ? "Active" : "Inactive"; ?></td>
+            <td>
+              
+                <a class="button-custom button-warning" 
+                   href="/Project personal/MVC/Controller/AdminUsersController.php?edit_id=<?php echo $user['id']; ?>">Edit</a>
 
+              
+                <a class="button-custom button-danger" 
+                   href="/Project personal/MVC/Controller/AdminUsersController.php?delete_id=<?php echo $user['id']; ?>" 
+                   onclick="return confirm('Are you sure?');">Delete</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+<?php else: ?>
+    <tr><td colspan="6" style="text-align:center;">No Users Found</td></tr>
+<?php endif; ?>
+  
+                    </tbody>
                 </table>
             </div>
         </div>
