@@ -32,7 +32,7 @@ class AuthController {
                     {
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['role']    = $user['role'];
-                    header("Location: ../Views/Admin/AdminDashboard.php");
+                    header("Location: ../Controller/AdminDashboardController.php");
                     exit;
                       }
                  else
