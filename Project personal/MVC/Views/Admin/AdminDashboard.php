@@ -22,7 +22,7 @@
                   <a href="">Registrations</a>
                   <a href="">Manage Tasks</a>           
                      <a href="">Settings</a>
-             <a href="/Project personal/MVC/Controller/logout.php">Logout</a>
+             <a href="../../MVC/Controller/logout.php">Logout</a>
 
 </div>
 
