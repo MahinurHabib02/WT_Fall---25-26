@@ -83,6 +83,16 @@
             <input type="date" id="task_date" name="task_date" required>
 </div>
 
+<script>
+          const eventSelect = document.getElementById('event_name');
+            const taskDateInput = document.getElementById('task_date');
+
+    eventSelect.addEventListener('change', function() {
+                const selectedOption = eventSelect.options[eventSelect.selectedIndex];
+                taskDateInput.value = selectedOption.getAttribute('data-date') || '';
+                 });
+                          </script>
+
 
 
       <button type="submit" name="add_task" class="btn btn-primary">Add Task</button>
