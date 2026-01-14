@@ -70,11 +70,11 @@
             <td>
               
                 <a class="button-custom button-warning" 
-                   href="/Project personal/MVC/Controller/AdminUsersController.php?edit_id=<?php echo $user['id']; ?>">Edit</a>
+                   href="../Controller/AdminUsersController.php?edit_id=<?php echo $user['id']; ?>">Edit</a>
 
               
                 <a class="button-custom button-danger" 
-                   href="/Project personal/MVC/Controller/AdminUsersController.php?delete_id=<?php echo $user['id']; ?>" 
+                   href="..Controller/AdminUsersController.php?delete_id=<?php echo $user['id']; ?>" 
                    onclick="return confirm('Are you sure?');">Delete</a>
             </td>
         </tr>
@@ -91,7 +91,7 @@
 </div>
 <?php if($editUser): ?>
 <div class="card-custom" style="margin-bottom:20px;">
-    <form method="POST" action="/Project personal/MVC/Controller/AdminUsersController.php">
+    <form method="POST" action="../Controller/AdminUsersController.php">
         <input type="hidden" name="id" value="<?php echo $editUser['id']; ?>">
 
 
@@ -113,6 +113,40 @@
     </form>
 </div>
 <?php endif; ?>
+
+<script>
+
+        const searchInput = document.querySelector('.input-custom');
+        const table = document.querySelector('.table-custom tbody');
+
+searchInput.addEventListener('input', function() 
+          {
+            const filter = searchInput.value.toLowerCase();
+            const rows = table.querySelectorAll('tr');
+
+    rows.forEach(row => 
+            {
+              const cells = row.querySelectorAll('td');
+              let match = false;
+
+        cells.forEach(cell => 
+            {
+               if (cell.textContent.toLowerCase().includes(filter))
+                                       {
+                                            match = true;
+                                                   }
+                                                        });
+
+        if (match)
+                  {
+                     row.style.display = '';
+                       } 
+                 else {
+                     row.style.display = 'none';
+                              }
+                        });
+                    });
+</script>
 
 </body>
 </html>
