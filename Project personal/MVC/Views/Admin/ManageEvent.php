@@ -22,7 +22,6 @@
               <a href="../Controller/AdminDashboardController.php">Dashboard</a>
                    <a href="../Controller/AdminUsersController.php">Manage Users</a>
                 <a href="../Controller/EventController.php">Manage Events</a>
-                  <a href="../Controller/RegistrationController.php">Registrations</a>
                   <a href="../Controller/TaskController.php">Manage Tasks</a>           
                      <a href="../Controller/AdminSettingsController.php">Settings</a>
              <a href="../../MVC/Controller/logout.php">Logout</a>
@@ -122,38 +121,8 @@
     </div>
 </div>
 
-<script>
+<script src="../Views/JS/manageevent.js">
 
-function searchTable()
-        {
-           const input = document.querySelector(".search-input").value.toLowerCase();
-            document.querySelectorAll("#eventTable tbody tr").forEach(row=>{
-                row.style.display = row.innerText.toLowerCase().includes(input) ? "" : "none";
-                     });
-              }
-
-function showAddForm()
-        {
-           document.getElementById('addForm').style.display='block';
-             document.getElementById('editForm').style.display='none';
-                      }
-function hideForms()
-          {
-                document.getElementById('addForm').style.display='none';
-                document.getElementById('editForm').style.display='none';
-                   }
-
-function editEvent(id,name,date,venue,participants,status)
-                {
-                     document.getElementById('editForm').style.display='block';
-                       document.getElementById('addForm').style.display='none';
-                      document.getElementById('edit_id').value = id;
-                     document.getElementById('edit_name').value = name;
-                     document.getElementById('edit_date').value = date;
-                      document.getElementById('edit_venue').value = venue;
-                       document.getElementById('edit_participants').value = participants;
-                     document.getElementById('edit_status').value = status;
-                       } 
            </script>
         </body>
 </html>
