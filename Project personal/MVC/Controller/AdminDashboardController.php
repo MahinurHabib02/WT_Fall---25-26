@@ -3,8 +3,9 @@ session_start();
 
 require_once __DIR__ . "../../Model/AdminDashboardModel.php";
 
-if(!isset($_SESSION['username'])){
-    $_SESSION['username'] = "Admin";
+if(!isset($_SESSION['username']))
+    {
+    $_SESSION['username'] = $user['username'];
 }
 
 $model = new AdminDashboardModel();
