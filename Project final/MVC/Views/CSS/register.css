@@ -1,0 +1,58 @@
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#f4f6f9
+}
+.card{
+width:100%;
+max-width:420px;
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.2)
+}
+h3{
+text-align:center;
+color:#0d6efd;
+margin-bottom:25px
+}
+
+
+.password-wrapper {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+}
+.toggle-icon {
+     position: absolute;
+     right: 10px;
+     top: 35px; 
+     cursor: pointer;
+     user-select: none;
+}
+
+img
+{
+    max-width:100%;
+    height:auto
+}
+
+label{font-weight:bold}
+input{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border-radius:12px;
+border:1px solid #ccc
+}
+button{
+width:100%;
+padding:12px;
+background:#0d6efd;
+color:#fff;
+border:0;
+border-radius:12px
+}
